@@ -184,7 +184,7 @@ def run_optimization(tuning_method='bayes', n_init_points=10, checkpoint_path=No
 
     if tuning_method == 'bayes':
         search_space = [
-            Categorical([12, 18, 24, 36, 42, 48], name='lookback'),
+            Categorical([12, 18, 24], name='lookback'),
             Integer(8, 256, name='hidden_size'),
             Integer(1, 6, name='num_layers'),
             Real(0.001, 0.05, prior='log-uniform', name='learning_rate'),
